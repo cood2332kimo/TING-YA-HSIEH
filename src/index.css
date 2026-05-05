@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#d8e2dc] text-slate-900 font-sans antialiased;
+    background-image: 
+      linear-gradient(135deg, #d8e2dc 0%, #ffe5d9 50%, #ffcad4 100%);
+    background-attachment: fixed;
+  }
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-[0_8px_32px_rgba(157,129,137,0.1)] rounded-[2rem];
+}
+
+.btn-primary {
+  @apply px-8 py-4 bg-[#f4acb7] hover:bg-[#ffcad4] text-white font-bold rounded-2xl transition-all hover:shadow-[0_12px_24px_rgba(244,172,183,0.4)] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-white border border-[#ffcad4]/50 hover:border-[#f4acb7] hover:bg-[#ffe5d9]/30 text-[#9d8189] hover:text-[#f4acb7] font-bold rounded-2xl transition-all shadow-sm active:scale-95 flex items-center justify-center gap-2;
+}
+
+.btn-sample {
+  @apply px-5 py-2.5 bg-white/60 hover:bg-white text-[#9d8189] font-bold rounded-xl transition-all flex items-center gap-2 border border-white shadow-sm;
+}
+
+.input-field {
+  @apply w-full px-5 py-4 bg-white/40 border border-white/60 rounded-2xl focus:ring-4 focus:ring-[#f4acb7]/20 focus:bg-white focus:border-[#f4acb7]/50 transition-all outline-none text-slate-700 placeholder-[#9d8189]/50;
+}
